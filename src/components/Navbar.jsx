@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import mpn from "../assets/mpn.jpg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "fantasy"
   );
+
+  const user = null;
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -41,28 +44,45 @@ const Navbar = () => {
               theme === "dark" ? "text-white" : "text-primary"
             } gap-8`}
           >
-            <p className="text-base cursor-pointer">Home</p>
-            <p className="text-base cursor-pointer">About Us</p>
-            <p className="text-base cursor-pointer">Contact Us</p>
-            <p className="text-base cursor-pointer">Privacy Policy</p>
-            <p className="text-base cursor-pointer">Advertise with Us</p>
+            <Link to={"/"}>
+              <p className="text-base cursor-pointer">Home</p>
+            </Link>
+            <Link to={"/about"}>
+              <p className="text-base cursor-pointer">About Us</p>
+            </Link>
+            <Link to={"/contact"}>
+              <p className="text-base cursor-pointer">Contact Us</p>
+            </Link>
+            <Link to={"/privacy-policy"}>
+              <p className="text-base cursor-pointer">Privacy Policy</p>
+            </Link>
+            <Link to={"/advertise"}>
+              <p className="text-base cursor-pointer">Advertise with Us</p>
+            </Link>
           </div>
         </div>
         <div className="flex-none gap-8">
-          <button
-            className={`btn btn-ghost text-base ${
-              theme === "dark" ? "text-white" : "text-primary"
-            } font-normal normal-case`}
-          >
-            Be a Contributor
-          </button>
-          <button
-            className={`btn btn-ghost text-base ${
-              theme === "dark" ? "text-white" : "text-primary"
-            } font-normal normal-case`}
-          >
-            Create Business
-          </button>
+          <Link to={"/register"}>
+            <button
+              type="button"
+              className={`btn btn-ghost text-base ${
+                theme === "dark" ? "text-white" : "text-primary"
+              } font-normal normal-case`}
+            >
+              Be a Contributor
+            </button>
+          </Link>
+
+          {/* <Link to={"/register"}>
+            <button
+              className={`btn btn-ghost text-base ${
+                theme === "dark" ? "text-white" : "text-primary"
+              } font-normal normal-case`}
+            >
+              Create Business
+            </button>
+          </Link> */}
+
           <label className="swap swap-rotate">
             <input type="checkbox" onChange={handleToggle} />
 
@@ -83,26 +103,39 @@ const Navbar = () => {
             </svg>
           </label>
 
-          <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img src="/vite.svg" />
-              </div>
-            </label>
-            <ul
-              tabIndex={0}
-              className={`mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-200 ${
-                theme === "dark" ? "text-white" : "text-black"
-              }  rounded-box w-52`}
-            >
-              <li>
-                <a className="justify-between">Profile</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
-          </div>
+          {user ? (
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src="/vite.svg" />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className={`mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-200 ${
+                  theme === "dark" ? "text-white" : "text-black"
+                }  rounded-box w-52`}
+              >
+                <li>
+                  <a className="justify-between">Profile</a>
+                </li>
+                <li>
+                  <a>Logout</a>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <Link to={"/login"}>
+              <button
+                type="button"
+                className={`btn btn-ghost text-base ${
+                  theme === "dark" ? "text-white" : "text-primary"
+                } font-normal normal-case`}
+              >
+                Login
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </>
