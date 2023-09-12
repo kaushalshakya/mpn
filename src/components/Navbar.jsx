@@ -73,16 +73,6 @@ const Navbar = () => {
             </button>
           </Link>
 
-          {/* <Link to={"/register"}>
-            <button
-              className={`btn btn-ghost text-base ${
-                theme === "dark" ? "text-white" : "text-primary"
-              } font-normal normal-case`}
-            >
-              Create Business
-            </button>
-          </Link> */}
-
           <label className="swap swap-rotate">
             <input type="checkbox" onChange={handleToggle} />
 
