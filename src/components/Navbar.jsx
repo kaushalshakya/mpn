@@ -26,18 +26,20 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar bg-base-100 text-primary">
-        <div className="flex-1 gap-8">
-          {theme !== "dark" ? (
-            <div className="w-40 cursor-pointer">
-              <img src="https://marketplacenepal.com/frontend/images/logo.png" />
-            </div>
-          ) : (
-            <div className="avatar">
-              <div className="w-8 rounded-full">
-                <img src={mpn} />
+        <div className="flex-1 ml-[10px] gap-8">
+          <Link to={"/"}>
+            {theme !== "dark" ? (
+              <div className="w-40 cursor-pointer">
+                <img src="https://marketplacenepal.com/frontend/images/logo.png" />
               </div>
-            </div>
-          )}
+            ) : (
+              <div className="avatar">
+                <div className="w-8 rounded-full">
+                  <img src={mpn} />
+                </div>
+              </div>
+            )}
+          </Link>
 
           <div
             className={`flex ${

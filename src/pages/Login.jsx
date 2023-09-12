@@ -38,12 +38,13 @@ const Login = () => {
   };
 
   return (
-    <div className="hero h-[750px] bg-base-200">
+    <div className="hero h-[750px] bg-base-300">
       <ToastContainer />
-      <div className="hero-content flex-col lg:flex-row">
-        <div className="text-center lg:text-left">
-          <p className="py-6"></p>
-        </div>
+      <div className="hero-content flex-col lg:flex-row gap-[40rem]">
+        <img
+          src="https://marketplacenepal.com/frontend/images/business.png"
+          alt=""
+        />
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <div className="card-body">
             <h1 className="text-3xl font-bold">Login now!</h1>
@@ -68,7 +69,7 @@ const Login = () => {
                       {" "}
                       <path
                         fillRule="evenodd"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                         d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
                         fill="#e1e1e1"
                       ></path>{" "}
@@ -129,7 +130,7 @@ const Login = () => {
                   <label className="label cursor-pointer">
                     <input
                       type="checkbox"
-                      className="w-4 h-4 checkbox checkbox-primary"
+                      className="w-4 h-4 checkbox rounded-none checkbox-primary"
                     />
                   </label>
                   <span className="label-text ml-0">Remember me</span>
@@ -144,13 +145,12 @@ const Login = () => {
             <div>
               <label className="label">
                 <span className="label-text">
-                  Don't have an account? Click{" "}
+                  Don't have an account?{" "}
                   <Link to={"/register"}>
                     <span className="text-[#D92689] hover:underline-offset-4">
-                      here
+                      Register Now
                     </span>
-                  </Link>{" "}
-                  to register!
+                  </Link>
                 </span>
               </label>
             </div>
