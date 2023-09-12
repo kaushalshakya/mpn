@@ -7,6 +7,7 @@ import Advertise from "./pages/Advertise";
 import Privacy from "./pages/Privacy";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Footer from "./components/Footer";
 
 export default function App() {
   const theme = localStorage.getItem("theme");
@@ -28,6 +29,7 @@ export default function App() {
             <Route path="/register" Component={Register} />
             <Route path="/login" Component={Login} />
           </Routes>
+          <Footer />
         </Router>
       </div>
     </>
