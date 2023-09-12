@@ -105,7 +105,7 @@ const Navbar = () => {
               <ul
                 tabIndex={0}
                 className={`mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-200 ${
-                  theme === "dark" ? "text-white" : "text-black"
+                  theme === "dark" ? "text-white" : "text-primary"
                 }  rounded-box w-52`}
               >
                 <li>
