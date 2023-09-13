@@ -47,7 +47,7 @@ const Footer = () => {
           </Link>
         </div>
       </aside>
-      <nav className="flex ml-[15rem] md:flex-row items-center justify-center md:ml-[10rem] md:gap-[10rem] lg:flex-row lg:justify-center lg:ml-[15rem] lg:gap-[10rem] xl:ml-[25rem] xl:gap-[25rem] 2xl:ml-[30rem] 2xl:gap-[30rem]">
+      <nav className="flex ml-[10rem] gap-[10rem] md:flex-row items-center justify-center md:ml-[10rem] md:gap-[10rem] lg:flex-row lg:justify-center lg:ml-[15rem] lg:gap-[10rem] xl:ml-[25rem] xl:gap-[25rem] 2xl:ml-[30rem] 2xl:gap-[30rem]">
         <div
           className={`flex flex-col gap-3 ${
             theme == "dark" ? "text-white" : "text-primary"
