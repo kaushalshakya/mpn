@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import mpn from "../assets/mpn.jpg";
 import { Link } from "react-router-dom";
 
-const NewNav = () => {
+const Navbar = () => {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "fantasy"
   );
 
-  const user = 1;
+  const user = null;
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -27,7 +27,7 @@ const NewNav = () => {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         <div className="w-full flex items-center gap-[407px] navbar bg-base-100">
-          <div className="flex-none lg:hidden">
+          <div className="flex flex-row lg:hidden">
             <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ const NewNav = () => {
           </div>
 
           <Link to={"/"}>
-            <div className="w-40 ml-3 cursor-pointer">
+            <div className="block w-40 ml-3 cursor-pointer">
               <img src="https://marketplacenepal.com/frontend/images/logo.png" />
             </div>
           </Link>
@@ -150,41 +150,70 @@ const NewNav = () => {
           } font-normal normal-case`}
         >
           <Link to={"/"}>
+            <li className="cursor-pointer rounded-full">
+              {" "}
+              <img
+                src={mpn}
+                alt="Market Place Nepal"
+                className="rounded-[100%] w-[10rem] ml-[61px]"
+              />
+            </li>
+          </Link>
+          <p className="divider"></p>
+          <Link to={"/"}>
             <li className="text-base cursor-pointer">Home</li>
           </Link>
+          <p className="divider"></p>
           <Link to={"/about"}>
             <li className="text-base cursor-pointer">About Us</li>
           </Link>
+          <p className="divider"></p>
           <Link to={"/contact"}>
             <li className="text-base cursor-pointer">Contact Us</li>
           </Link>
+          <p className="divider"></p>
           <Link to={"/privacy-policy"}>
             <li className="text-base cursor-pointer">Privacy Policy</li>
           </Link>
+          <p className="divider"></p>
           <Link to={"/advertise"}>
             <li className="text-base cursor-pointer">Advertise with Us</li>
           </Link>
+          <p className="divider"></p>
           <Link to={"/register"}>
             <li className="text-base cursor-pointer">Be a Contributor</li>
           </Link>
+          <p className="divider"></p>
           {user ? (
-            <li className="text-base cursor-pointer">View Profile</li>
+            <>
+              <li className="text-base cursor-pointer">View Profile</li>
+              <p className="divider"></p>
+            </>
           ) : (
-            <Link to={"/login"}>
-              <li
-                className={`text-base cursor-pointer ${
-                  theme === "dark" ? "text-white" : "text-primary"
-                } font-normal normal-case`}
-              >
-                Login
-              </li>
-            </Link>
+            <>
+              {" "}
+              <Link to={"/login"}>
+                <li
+                  className={`text-base cursor-pointer ${
+                    theme === "dark" ? "text-white" : "text-primary"
+                  } font-normal normal-case`}
+                >
+                  Login
+                </li>
+              </Link>
+              <p className="divider"></p>
+            </>
           )}
-          {user && <li className="text-base cursor-pointer">Logout</li>}
+          {user && (
+            <>
+              <li className="text-base cursor-pointer">Logout</li>
+              <p className="divider"></p>
+            </>
+          )}
         </ul>
       </div>
     </div>
   );
 };
 
-export default NewNav;
+export default Navbar;
