@@ -36,7 +36,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="hero min-h-[750px] bg-base-200">
+      <div className="hero min-h-[760px] bg-base-200">
         <div className="hero-content flex-col lg:flex-row gap-[20rem]">
           <img
             src="https://marketplacenepal.com/frontend/images/contact.png"
