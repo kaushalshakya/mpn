@@ -74,7 +74,7 @@ const Navbar = ({ children }) => {
               </Link>
             </ul>
           </div>
-          <div className="flex-none hidden lg:ml-[6rem] lg:flex">
+          <div className="flex-none hidden lg:ml-[2rem] lg:flex">
             <Link to={"/register"}>
               <button
                 type="button"
