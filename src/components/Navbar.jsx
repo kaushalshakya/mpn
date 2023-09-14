@@ -46,7 +46,7 @@ const Navbar = ({ children }) => {
           </div>
 
           <Link to={"/"}>
-            <div className="block w-[95px] mr-4 cursor-pointer">
+            <div className="block w-[95px] mr-4 2xl:ml-4 cursor-pointer">
               <img src="https://marketplacenepal.com/frontend/images/logo.png" />
             </div>
           </Link>

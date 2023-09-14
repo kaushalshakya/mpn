@@ -38,16 +38,16 @@ const Login = () => {
   };
 
   return (
-    <div className="hero h-[750px] bg-base-300">
+    <div className="mt-12 mx-10">
       <ToastContainer />
-      <div className="hero-content flex-col lg:flex-row gap-[40rem]">
+      <div className="lg:hero-content lg:flex lg:flex-row items-center lg:justify-between xl:gap-[5] xl:ml-32 2xl:gap-8 2xl:ml-36 justify-center">
         <img
           src="https://marketplacenepal.com/frontend/images/business.png"
           alt=""
-          className="hidden md:block"
+          className="hidden lg:block xl:block 2xl:block"
         />
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <div className="card-body">
+        <div className="card flex-shrink-0 shadow-2xl bg-base-100">
+          <div className="card-body h-full">
             <h1 className="text-3xl font-bold">Login now!</h1>
             <form action="" method="POST">
               <div className="form-control relative">
