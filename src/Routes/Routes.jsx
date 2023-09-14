@@ -25,8 +25,8 @@ const Routes = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Endpoints>
+        {location.pathname !== "/" && <Footer />}
       </Navbar>
-      {location.pathname !== "/" && <Footer />}
     </>
   );
 };

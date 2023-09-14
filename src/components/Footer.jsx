@@ -37,7 +37,7 @@ const Footer = () => {
   }, [dataTheme]);
 
   return (
-    <footer className="footer max-h-[120px] p-[1.3rem] bg-base-100 gap-0 md:gap-x-25 lg:gap-x-25 fixed bottom-0 text-neutral-content">
+    <footer className="footer max-h-[120px] p-[1.3rem] items-center justify-center bg-base-100 fixed bottom-0 text-neutral-content">
       <aside className="hidden md:block lg:block">
         <div className="avatar rounded-full">
           <Link to={"/"}>
@@ -47,7 +47,7 @@ const Footer = () => {
           </Link>
         </div>
       </aside>
-      <nav className="flex ml-[2rem] gap-[2rem] items-center justify-center md:flex-row md:ml-[10rem] md:gap-[10rem] lg:flex-row lg:justify-center lg:ml-[15rem] lg:gap-[10rem] xl:ml-[25rem] xl:gap-[25rem] 2xl:ml-[30rem] 2xl:gap-[30rem]">
+      <nav className="flex ml-[2rem] gap-[2rem] items-center justify-between md:flex-row lg:flex-row lg:justify-center ">
         <div
           className={`flex flex-col gap-3 ${
             theme == "dark" ? "text-white" : "text-primary"
