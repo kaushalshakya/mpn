@@ -36,7 +36,7 @@ export default function App() {
   }, [dataTheme]);
   return (
     <>
-      <div className="bg-base-300 h-screen">
+      <div className="bg-base-200 h-screen w-screen">
         <Router>
           <Routes />
         </Router>

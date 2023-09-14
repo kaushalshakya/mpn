@@ -15,16 +15,17 @@ const Routes = () => {
   const location = useLocation();
   return (
     <>
-      <Navbar />
-      <Endpoints>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/advertise" element={<Advertise />} />
-        <Route path="/privacy-policy" element={<Privacy />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-      </Endpoints>
+      <Navbar>
+        <Endpoints>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/advertise" element={<Advertise />} />
+          <Route path="/privacy-policy" element={<Privacy />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+        </Endpoints>
+      </Navbar>
       {location.pathname !== "/" && <Footer />}
     </>
   );

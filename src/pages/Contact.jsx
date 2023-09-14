@@ -36,11 +36,11 @@ const Contact = () => {
 
   return (
     <>
-      <div className="hero min-h-[760px] bg-base-200">
-        <div className="hero-content flex-col lg:flex-row gap-[20rem]">
+      <div className="hero h-[36rem] max-h-screen lg:min-h-[760px] max-w-screen bg-base-200">
+        <div className="hero-content flex-col md:flex-row lg:flex-row lg:gap-[20rem]">
           <img
             src="https://marketplacenepal.com/frontend/images/contact.png"
-            className="max-w-sm h-full rounded-lg"
+            className="max-w-sm md:max-w-md lg:max-w-lg hidden md:block lg:block rounded-lg"
           />
           <div className={theme == "fantasy" ? "text-primary" : "text-white"}>
             <h1 className="text-5xl font-bold mb-[5rem]">Contact Us!</h1>

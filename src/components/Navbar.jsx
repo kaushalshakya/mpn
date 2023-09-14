@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Children } from "react";
 import mpn from "../assets/mpn.jpg";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ children }) => {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "fantasy"
   );
@@ -23,10 +23,10 @@ const Navbar = () => {
     }
   };
   return (
-    <div className="drawer">
+    <div className="drawer flex flex-col max-w-screen">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
-        <div className="w-full flex items-center gap-[407px] navbar bg-base-100">
+        <div className="flex items-center justify-between bg-base-100 p-[1rem] sm:gap-x-[450px] md:gap-x-[573px] lg:gap-x-[39px]">
           <div className="flex flex-row lg:hidden">
             <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
               <svg
@@ -46,17 +46,17 @@ const Navbar = () => {
           </div>
 
           <Link to={"/"}>
-            <div className="block w-40 ml-3 cursor-pointer">
+            <div className="block w-[95px] mr-4 cursor-pointer">
               <img src="https://marketplacenepal.com/frontend/images/logo.png" />
             </div>
           </Link>
 
           <div
-            className={`flex-none hidden lg:block ${
+            className={`flex-none hidden lg:flex ${
               theme === "dark" ? "text-white" : "text-primary"
-            } gap-8`}
+            } lg:ml-[51px]`}
           >
-            <ul className="menu menu-horizontal flex items-center gap-8 ml-8">
+            <ul className="menu menu-horizontal flex items-center gap-8 lg:ml-0">
               <Link to={"/"}>
                 <li className="text-base cursor-pointer">Home</li>
               </Link>
@@ -74,7 +74,7 @@ const Navbar = () => {
               </Link>
             </ul>
           </div>
-          <div className="flex-none hidden lg:flex lg:gap-[35px]">
+          <div className="flex-none hidden lg:flex">
             <Link to={"/register"}>
               <button
                 type="button"
@@ -142,6 +142,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {children}
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
         <ul
