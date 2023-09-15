@@ -26,7 +26,7 @@ const Navbar = ({ children }) => {
     <div className="drawer flex flex-col max-w-screen">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
-        <div className="flex items-center justify-between bg-base-100 p-[1rem] ">
+        <div className="flex items-center w-screen justify-between bg-base-100 p-[1rem] ">
           <div className="flex flex-row lg:hidden">
             <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
               <svg
