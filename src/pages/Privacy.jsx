@@ -26,7 +26,7 @@ const Privacy = () => {
   return (
     <>
       <div className="flex items-start max-w-screen justify-between mb-[7rem] p-5">
-        <div className="hidden lg:flex lg:flex-col bg-base-100 mr-5 lg:rounded-md lg:w-[175vh]">
+        <div className="hidden lg:flex lg:flex-col bg-base-100 mr-5 lg:rounded-md lg:w-[100rem]">
           <ul className="flex flex-col items-start p-4 text-xl cursor-pointer font-bold">
             <li onClick={() => scrollToRef(informationCollectRef)}>
               Types of Information We Collect
@@ -369,7 +369,7 @@ const Privacy = () => {
               <p>
                 The Company may use Personal Data for the following purposes:
               </p>
-              <ul>
+              <ul className="flex flex-col gap-2">
                 <li>
                   <span className="font-bold">
                     - To provide and maintain our Service:
@@ -528,7 +528,7 @@ const Privacy = () => {
                 The Company may disclose Your Personal Data in the good faith
                 belief that such action is necessary to:
               </p>
-              <ul>
+              <ul className="flex flex-col gap-2">
                 <li>- Comply with a legal obligation</li>
                 <li>
                   - Protect and defend the rights or property of the Company
