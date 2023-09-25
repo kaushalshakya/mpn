@@ -63,7 +63,7 @@ const About = () => {
           </p>
         </div>
         <div className="flex flex-col gap-8 items-center">
-          <h1 className="text-primary text-5xl mx-5 font-extrabold">
+          <h1 className="text-primary text-5xl text-center mx-5 font-extrabold">
             WHAT DO WE DO?
           </h1>
           <div className="flex flex-col text-justify gap-8 items-center justify-center mx-5 lg:grid lg:mx-8 lg:grid-cols-2 lg:grid-rows-2 lg:gap-4 lg:place-items-stretch">

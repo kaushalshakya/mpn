@@ -142,7 +142,7 @@ const Navbar = ({ children }) => {
           </div>
         </div>
       </div>
-      {children}
+      <div className="max-w-screen">{children}</div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
         <ul
