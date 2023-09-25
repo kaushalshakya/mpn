@@ -1,14 +1,102 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const Privacy = () => {
+  const informationCollectRef = useRef(null);
+  const interpretationRef = useRef(null);
+  const definitionRef = useRef(null);
+  const collectingPersonalDataRef = useRef(null);
+  const socialMediaRef = useRef(null);
+  const trackTechRef = useRef(null);
+  const personalDataRef = useRef(null);
+  const disclosureRef = useRef(null);
+  const legalRef = useRef(null);
+  const securityRef = useRef(null);
+  const reviewRef = useRef(null);
+  const childPrivacyRef = useRef(null);
+  const linkRef = useRef(null);
+  const changesRef = useRef(null);
+  const contactRef = useRef(null);
+  const retentionRef = useRef(null);
+  const transferRef = useRef(null);
+
+  const scrollToRef = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
-      <div className="flex items-center max-w-screen justify-between mb-[7rem] p-5">
-        <div className="hidden lg:flex lg:flex-col">Table</div>
+      <div className="flex items-start max-w-screen justify-between mb-[7rem] p-5">
+        <div className="hidden lg:flex lg:flex-col bg-base-100 mr-5 lg:rounded-md lg:w-[175vh]">
+          <ul className="flex flex-col items-start p-4 text-xl cursor-pointer font-bold">
+            <li onClick={() => scrollToRef(informationCollectRef)}>
+              Types of Information We Collect
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(interpretationRef)}>
+              Interpretation
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(definitionRef)}>Definitions</li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(collectingPersonalDataRef)}>
+              Collecting and using your personal data
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(socialMediaRef)}>
+              Information from third-party social media services
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(trackTechRef)}>
+              Tracking technologies and cookies
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(personalDataRef)}>
+              use of your personal data
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(retentionRef)}>
+              Retention of your personal Data
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(transferRef)}>
+              Transfer of your personal data
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(disclosureRef)}>
+              Disclosure of Your Personal Data{" "}
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(legalRef)}>
+              Other legal requirements
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(securityRef)}>
+              Security of Your Personal Data
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(reviewRef)}>
+              Review / Update / Delete collected information about users.
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(childPrivacyRef)}>
+              Children's Privacy
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(linkRef)}>
+              Links to Other Websites
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(changesRef)}>
+              Changes to this Privacy Policy
+            </li>
+            <li className="divider"></li>
+            <li onClick={() => scrollToRef(contactRef)}>Contact Us</li>
+          </ul>
+        </div>
         <div className="flex flex-col gap-8 items-center text-justify">
           <h1 className="font-bold text-2xl">Privacy Policy</h1>
-          <div className="flex flex-col gap-4 items-center w-sm">
-            <div className="flex flex-col gap-4 ">
+          <div className="flex flex-col gap-4 items-start w-sm">
+            <div ref={informationCollectRef} className="flex flex-col gap-4 ">
               <h1 className="font-bold text-xl">
                 Types of Information We Collect
               </h1>
@@ -25,7 +113,7 @@ const Privacy = () => {
               </p>
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div ref={interpretationRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">Interpretation</h1>
               <p>
                 The words of which the initial letter is capitalized have
@@ -35,7 +123,7 @@ const Privacy = () => {
               </p>
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div ref={definitionRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">Definitions</h1>
               <p>For the purposes of this Privacy Policy:</p>
               <ul className="flex flex-col gap-4">
@@ -98,7 +186,10 @@ const Privacy = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-4">
+            <div
+              ref={collectingPersonalDataRef}
+              className="flex flex-col gap-4"
+            >
               <h1 className="font-bold text-xl">
                 Collecing your Personal Data:
               </h1>
@@ -140,7 +231,7 @@ const Privacy = () => {
                 through a mobile device.
               </p>
             </div>
-            <div className="flex flex-col gap-4">
+            <div ref={socialMediaRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">
                 Information from Third-Party Social Media Services
               </h1>
@@ -170,7 +261,7 @@ const Privacy = () => {
                 consistent with this Privacy Policy.
               </p>
             </div>
-            <div className="flex flex-col gap-4">
+            <div ref={trackTechRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">
                 Tracking Technologies and Cookies
               </h1>
@@ -273,7 +364,7 @@ const Privacy = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-4">
+            <div ref={personalDataRef} className="flex flex-col gap-4">
               <h1 className="text-xl font-bold">Use of your Personal Data</h1>
               <p>
                 The Company may use Personal Data for the following purposes:
@@ -384,7 +475,7 @@ const Privacy = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-4">
+            <div ref={retentionRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">
                 Retention of Your Personal Data
               </h1>
@@ -405,7 +496,7 @@ const Privacy = () => {
                 periods.
               </p>
             </div>
-            <div className="flex flex-col gap-4">
+            <div ref={transferRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">
                 Transfer of Your Personal Data
               </h1>
@@ -431,7 +522,7 @@ const Privacy = () => {
                 personal information.
               </p>
             </div>
-            <div className="flex flex-col gap-4">
+            <div ref={legalRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">Other legal requirements</h1>
               <p>
                 The Company may disclose Your Personal Data in the good faith
@@ -453,7 +544,7 @@ const Privacy = () => {
                 <li>- Protect against legal liability</li>
               </ul>
             </div>
-            <div className="flex flex-col gap-4">
+            <div ref={securityRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">
                 Security of Your Personal Data
               </h1>
@@ -465,7 +556,7 @@ const Privacy = () => {
                 We cannot guarantee its absolute security.
               </p>
             </div>
-            <div className="flex flex-col gap-4">
+            <div ref={reviewRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">
                 Review / Update / Delete collected information about users.
               </h1>
@@ -487,7 +578,7 @@ const Privacy = () => {
                 also deleted.
               </p>
             </div>
-            <div className="flex flex-col gap-4">
+            <div ref={childPrivacyRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">Children's Privacy</h1>
               <p>
                 Our Service does not address anyone under the age of 13. We do
@@ -506,7 +597,7 @@ const Privacy = () => {
                 and use that information.
               </p>
             </div>
-            <div className="flex flex-col gap-4">
+            <div ref={linkRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">Links to Other Websites</h1>
               <p>
                 Our Service may contain links to other websites that are not
@@ -520,7 +611,7 @@ const Privacy = () => {
                 or services.
               </p>
             </div>
-            <div className="flex flex-col gap-4">
+            <div ref={changesRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">
                 Changes to this Privacy Policy
               </h1>
@@ -540,7 +631,7 @@ const Privacy = () => {
                 they are posted on this page
               </p>
             </div>
-            <div className="flex flex-col gap-4">
+            <div ref={contactRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">Contact Us</h1>
               <p>
                 If you have any questions about this Privacy Policy, You can
