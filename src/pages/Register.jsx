@@ -96,7 +96,7 @@ const Register = () => {
   return (
     <div className="mb-[6rem] mx-10">
       <ToastContainer />
-      <div className="lg:hero-content lg:flex lg:flex-row items-center lg:justify-between xl:gap-[5] xl:ml-32 2xl:gap-8 2xl:ml-36 justify-center">
+      <div className="lg:hero-content lg:flex lg:flex-row items-center lg:justify-between xl:gap-[5] xl:ml-32 2xl:gap-[25rem] 2xl:ml-36 justify-center">
         <img
           src="https://marketplacenepal.com/frontend/images/business.png"
           alt=""
@@ -133,7 +133,7 @@ const Register = () => {
             />
           </div>
           <div className="card flex shadow-2xl bg-base-100">
-            <div className="card-body h-full md:w-[40rem] lg:w-[28rem]">
+            <div className="card-body gap-0 h-full md:w-[40rem] lg:w-[28rem]">
               <div className="flex flex-col gap-2 text-center items-center">
                 <h1 className="text-primary font-bold text-xl">
                   Register as {radio}
@@ -162,11 +162,19 @@ const Register = () => {
                       <g id="SVGRepo_iconCarrier">
                         {" "}
                         <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
-                          fill="#e1e1e1"
+                          d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                          stroke="#e1e1e1"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>{" "}
+                        <path
+                          d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
+                          stroke="#e1e1e1"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        ></path>
                       </g>
                     </svg>
                     <span className="label-text">Name</span>
@@ -319,7 +327,7 @@ const Register = () => {
                   </Link>
                 </p>
               </div>
-              <div className="divider">OR</div>
+              <div className="divider my-[8px]">OR</div>
               <div className="flex flex-col items-center gap-2">
                 <h1>Login with:</h1>
                 <div className="flex gap-5">
