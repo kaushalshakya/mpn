@@ -222,7 +222,7 @@ const Login = () => {
                 <input
                   type={passwordView ? "text" : "password"}
                   placeholder="********"
-                  className="input input-bordered pl-[2.5rem]"
+                  className="input input-bordered px-[2.5rem]"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
