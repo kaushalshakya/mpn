@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import mpn from "../assets/mpn.jpg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const [theme, setTheme] = useState(null);
   const [dataTheme, setDataTheme] = useState(
     document.querySelector("html").getAttribute("data-theme")
   );
+
+  const location = useLocation();
+  const fixedFooter =
+    location.pathname === "/login" || location.pathname === "/advertise";
 
   useEffect(() => {
     console.log(dataTheme);
@@ -37,7 +41,13 @@ const Footer = () => {
   }, [dataTheme]);
 
   return (
-    <footer className="footer max-h-[75px] md:max-h-[100px] p-[1.3rem] items-center flex md:justify-between lg:justify-between justify-center bg-base-100 fixed lg:static bottom-0 text-neutral-content">
+    <footer
+      className={
+        !fixedFooter
+          ? "footer max-h-[75px] md:max-h-[100px] p-[1.3rem] items-center flex md:justify-between lg:justify-between justify-center bg-base-100 fixed lg:static bottom-0 text-neutral-content"
+          : "footer max-h-[75px] md:max-h-[100px] p-[1.3rem] items-center flex md:justify-between lg:justify-between justify-center bg-base-100 fixed bottom-0 text-neutral-content"
+      }
+    >
       <aside className="hidden md:block lg:block">
         <div className="avatar rounded-full">
           <Link to={"/"}>

@@ -101,7 +101,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="mb-[7.5rem]">
+        <div>
           <img
             src="https://marketplacenepal.com/frontend/images/whatwedo.png"
             alt=""

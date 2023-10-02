@@ -21,21 +21,21 @@ const eyeOpen = (
       {" "}
       <path
         d="M12 16.01C14.2091 16.01 16 14.2191 16 12.01C16 9.80087 14.2091 8.01001 12 8.01001C9.79086 8.01001 8 9.80087 8 12.01C8 14.2191 9.79086 16.01 12 16.01Z"
-        stroke="#e1e1e1"
+        stroke="#b2beb5"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       ></path>{" "}
       <path
         d="M2 11.98C8.09 1.31996 15.91 1.32996 22 11.98"
-        stroke="#e1e1e1"
+        stroke="#b2beb5"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       ></path>{" "}
       <path
         d="M22 12.01C15.91 22.67 8.09 22.66 2 12.01"
-        stroke="#e1e1e1"
+        stroke="#b2beb5"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -62,42 +62,42 @@ const eyeClose = (
       {" "}
       <path
         d="M14.83 9.17999C14.2706 8.61995 13.5576 8.23846 12.7813 8.08386C12.0049 7.92926 11.2002 8.00851 10.4689 8.31152C9.73758 8.61453 9.11264 9.12769 8.67316 9.78607C8.23367 10.4444 7.99938 11.2184 8 12.01C7.99916 13.0663 8.41619 14.08 9.16004 14.83"
-        stroke="#e1e1e1"
+        stroke="#b2beb5"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       ></path>{" "}
       <path
         d="M12 16.01C13.0609 16.01 14.0783 15.5886 14.8284 14.8384C15.5786 14.0883 16 13.0709 16 12.01"
-        stroke="#e1e1e1"
+        stroke="#b2beb5"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       ></path>{" "}
       <path
         d="M17.61 6.39004L6.38 17.62C4.6208 15.9966 3.14099 14.0944 2 11.99C6.71 3.76002 12.44 1.89004 17.61 6.39004Z"
-        stroke="#e1e1e1"
+        stroke="#b2beb5"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       ></path>{" "}
       <path
         d="M20.9994 3L17.6094 6.39"
-        stroke="#e1e1e1"
+        stroke="#b2beb5"
         stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       ></path>{" "}
       <path
         d="M6.38 17.62L3 21"
-        stroke="#e1e1e1"
+        stroke="#b2beb5"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       ></path>{" "}
       <path
         d="M19.5695 8.42999C20.4801 9.55186 21.2931 10.7496 21.9995 12.01C17.9995 19.01 13.2695 21.4 8.76953 19.23"
-        stroke="#e1e1e1"
+        stroke="#b2beb5"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -210,7 +210,7 @@ const Register = () => {
         <div className="flex flex-col items-center justify-center">
           <div className="join flex items-stretch">
             <input
-              className="join-item hover:bg-[#BEB4D3] bg-base-100 btn"
+              className="join-item hover:bg-[#BEB4D3] checked:text-white hover:text-white bg-base-100 btn"
               type="radio"
               name="options"
               value="Business"
@@ -219,7 +219,7 @@ const Register = () => {
               onChange={handleChange}
             />
             <input
-              className="join-item hover:bg-[#BEB4D3] bg-base-100 btn"
+              className="join-item hover:bg-[#BEB4D3] hover:text-white checked:text-white bg-base-100 btn"
               type="radio"
               name="options"
               value="Contributor"
@@ -228,7 +228,7 @@ const Register = () => {
               onChange={handleChange}
             />
             <input
-              className="join-item hover:bg-[#BEB4D3] bg-base-100 btn"
+              className="join-item hover:bg-[#BEB4D3] hover:text-white checked:text-white bg-base-100 btn"
               type="radio"
               name="options"
               aria-label="Guest"
@@ -268,14 +268,14 @@ const Register = () => {
                         {" "}
                         <path
                           d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
-                          stroke="#e1e1e1"
+                          stroke="#b2beb5"
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         ></path>{" "}
                         <path
                           d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
-                          stroke="#e1e1e1"
+                          stroke="#b2beb5"
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -314,7 +314,7 @@ const Register = () => {
                           fillRule="evenodd"
                           clipRule="evenodd"
                           d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
-                          fill="#e1e1e1"
+                          fill="#b2beb5"
                         ></path>{" "}
                       </g>
                     </svg>
@@ -347,7 +347,7 @@ const Register = () => {
                       {" "}
                       <path
                         d="M15 9H15.01M15 15C18.3137 15 21 12.3137 21 9C21 5.68629 18.3137 3 15 3C11.6863 3 9 5.68629 9 9C9 9.27368 9.01832 9.54308 9.05381 9.80704C9.11218 10.2412 9.14136 10.4583 9.12172 10.5956C9.10125 10.7387 9.0752 10.8157 9.00469 10.9419C8.937 11.063 8.81771 11.1823 8.57913 11.4209L3.46863 16.5314C3.29568 16.7043 3.2092 16.7908 3.14736 16.8917C3.09253 16.9812 3.05213 17.0787 3.02763 17.1808C3 17.2959 3 17.4182 3 17.6627V19.4C3 19.9601 3 20.2401 3.10899 20.454C3.20487 20.6422 3.35785 20.7951 3.54601 20.891C3.75992 21 4.03995 21 4.6 21H6.33726C6.58185 21 6.70414 21 6.81923 20.9724C6.92127 20.9479 7.01881 20.9075 7.10828 20.8526C7.2092 20.7908 7.29568 20.7043 7.46863 20.5314L12.5791 15.4209C12.8177 15.1823 12.937 15.063 13.0581 14.9953C13.1843 14.9248 13.2613 14.8987 13.4044 14.8783C13.5417 14.8586 13.7588 14.8878 14.193 14.9462C14.4569 14.9817 14.7263 15 15 15Z"
-                        stroke="#e1e1e1"
+                        stroke="#b2beb5"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -391,7 +391,7 @@ const Register = () => {
                       {" "}
                       <path
                         d="M15 9H15.01M15 15C18.3137 15 21 12.3137 21 9C21 5.68629 18.3137 3 15 3C11.6863 3 9 5.68629 9 9C9 9.27368 9.01832 9.54308 9.05381 9.80704C9.11218 10.2412 9.14136 10.4583 9.12172 10.5956C9.10125 10.7387 9.0752 10.8157 9.00469 10.9419C8.937 11.063 8.81771 11.1823 8.57913 11.4209L3.46863 16.5314C3.29568 16.7043 3.2092 16.7908 3.14736 16.8917C3.09253 16.9812 3.05213 17.0787 3.02763 17.1808C3 17.2959 3 17.4182 3 17.6627V19.4C3 19.9601 3 20.2401 3.10899 20.454C3.20487 20.6422 3.35785 20.7951 3.54601 20.891C3.75992 21 4.03995 21 4.6 21H6.33726C6.58185 21 6.70414 21 6.81923 20.9724C6.92127 20.9479 7.01881 20.9075 7.10828 20.8526C7.2092 20.7908 7.29568 20.7043 7.46863 20.5314L12.5791 15.4209C12.8177 15.1823 12.937 15.063 13.0581 14.9953C13.1843 14.9248 13.2613 14.8987 13.4044 14.8783C13.5417 14.8586 13.7588 14.8878 14.193 14.9462C14.4569 14.9817 14.7263 15 15 15Z"
-                        stroke="#e1e1e1"
+                        stroke="#b2beb5"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
