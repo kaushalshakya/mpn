@@ -40,7 +40,7 @@ const Login = () => {
   return (
     <div className="mt-12 lg:mb-[70px] mx-10">
       <ToastContainer />
-      <div className="lg:hero-content lg:flex lg:flex-row items-center lg:justify-between xl:gap-[5] xl:ml-32 2xl:gap-8 2xl:ml-36 justify-center">
+      <div className="lg:hero-content lg:flex lg:flex-row items-center lg:justify-between xl:gap-[5] xl:ml-32 2xl:gap-8 2xl:ml-[18rem] justify-center">
         <img
           src="https://marketplacenepal.com/frontend/images/business.png"
           alt=""

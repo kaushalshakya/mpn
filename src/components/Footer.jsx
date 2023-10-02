@@ -10,7 +10,9 @@ const Footer = () => {
 
   const location = useLocation();
   const fixedFooter =
-    location.pathname === "/login" || location.pathname === "/advertise";
+    location.pathname === "/login" ||
+    location.pathname === "/advertise" ||
+    location.pathname === "/contact";
 
   useEffect(() => {
     console.log(dataTheme);

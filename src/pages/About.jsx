@@ -46,7 +46,7 @@ const About = () => {
           <div className="hero-overlay bg-opacity-80"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="">
-              <h1 className="mb-5 text-5xl text-white font-bold">
+              <h1 className="mb-5 uppercase text-5xl text-white font-bold">
                 Promote, Sell and Advertise
               </h1>
             </div>
