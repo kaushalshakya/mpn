@@ -3,6 +3,109 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+const eyeOpen = (
+  <svg
+    viewBox="0 0 24 24"
+    width="24px"
+    height="24px"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+    <g
+      id="SVGRepo_tracerCarrier"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      {" "}
+      <path
+        d="M12 16.01C14.2091 16.01 16 14.2191 16 12.01C16 9.80087 14.2091 8.01001 12 8.01001C9.79086 8.01001 8 9.80087 8 12.01C8 14.2191 9.79086 16.01 12 16.01Z"
+        stroke="#e1e1e1"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>{" "}
+      <path
+        d="M2 11.98C8.09 1.31996 15.91 1.32996 22 11.98"
+        stroke="#e1e1e1"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>{" "}
+      <path
+        d="M22 12.01C15.91 22.67 8.09 22.66 2 12.01"
+        stroke="#e1e1e1"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>{" "}
+    </g>
+  </svg>
+);
+
+const eyeClose = (
+  <svg
+    viewBox="0 0 24 24"
+    width="24px"
+    height="24px"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+    <g
+      id="SVGRepo_tracerCarrier"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      {" "}
+      <path
+        d="M14.83 9.17999C14.2706 8.61995 13.5576 8.23846 12.7813 8.08386C12.0049 7.92926 11.2002 8.00851 10.4689 8.31152C9.73758 8.61453 9.11264 9.12769 8.67316 9.78607C8.23367 10.4444 7.99938 11.2184 8 12.01C7.99916 13.0663 8.41619 14.08 9.16004 14.83"
+        stroke="#e1e1e1"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>{" "}
+      <path
+        d="M12 16.01C13.0609 16.01 14.0783 15.5886 14.8284 14.8384C15.5786 14.0883 16 13.0709 16 12.01"
+        stroke="#e1e1e1"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>{" "}
+      <path
+        d="M17.61 6.39004L6.38 17.62C4.6208 15.9966 3.14099 14.0944 2 11.99C6.71 3.76002 12.44 1.89004 17.61 6.39004Z"
+        stroke="#e1e1e1"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>{" "}
+      <path
+        d="M20.9994 3L17.6094 6.39"
+        stroke="#e1e1e1"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>{" "}
+      <path
+        d="M6.38 17.62L3 21"
+        stroke="#e1e1e1"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>{" "}
+      <path
+        d="M19.5695 8.42999C20.4801 9.55186 21.2931 10.7496 21.9995 12.01C17.9995 19.01 13.2695 21.4 8.76953 19.23"
+        stroke="#e1e1e1"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>{" "}
+    </g>
+  </svg>
+);
+
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -10,6 +113,8 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [theme, setTheme] = useState(null);
   const [radio, setRadio] = useState("Guest");
+  const [passwordView, setPasswordView] = useState(false);
+  const [confirmPasswordView, setConfirmPasswordView] = useState(false);
 
   const currentTheme = localStorage.getItem("theme");
 
@@ -94,9 +199,9 @@ const Register = () => {
   };
 
   return (
-    <div className="mb-[6rem] mx-10">
+    <div className="mx-10">
       <ToastContainer />
-      <div className="lg:hero-content lg:flex lg:flex-row items-center lg:justify-between xl:gap-[5] xl:ml-32 2xl:gap-[25rem] 2xl:ml-36 justify-center">
+      <div className="lg:hero-content lg:flex lg:flex-row items-center lg:justify-between xl:gap-[5] xl:ml-32 2xl:gap-[25rem] 2xl:ml-[18rem] justify-center">
         <img
           src="https://marketplacenepal.com/frontend/images/business.png"
           alt=""
@@ -133,7 +238,7 @@ const Register = () => {
             />
           </div>
           <div className="card flex shadow-2xl bg-base-100">
-            <div className="card-body gap-0 h-full md:w-[40rem] lg:w-[28rem]">
+            <div className="card-body lg:w-[30rem] gap-0 h-full">
               <div className="flex flex-col gap-2 text-center items-center">
                 <h1 className="text-primary font-bold text-xl">
                   Register as {radio}
@@ -253,12 +358,19 @@ const Register = () => {
                     <span className="label-text">Password</span>
                   </label>
                   <input
-                    type="password"
+                    type={passwordView ? "text" : "password"}
                     placeholder="********"
-                    className="input input-bordered pl-[2.5rem]"
+                    className="input input-bordered px-[2.5rem]"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
+                  <div
+                    className="absolute top-[53px] cursor-pointer right-[10px]"
+                    onBlur={"hidden"}
+                    onClick={() => setPasswordView((value) => !value)}
+                  >
+                    {!passwordView ? eyeOpen : eyeClose}
+                  </div>
                 </div>
                 <div className="form-control gap-1 relative">
                   <svg
@@ -290,12 +402,18 @@ const Register = () => {
                     <span className="label-text">Confirm Password</span>
                   </label>
                   <input
-                    type="password"
+                    type={confirmPasswordView ? "text" : "password"}
                     placeholder="********"
-                    className="input input-bordered pl-[2.5rem]"
+                    className="input input-bordered px-[2.5rem]"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                   />
+                  <div
+                    className="absolute top-[53px] cursor-pointer right-[10px]"
+                    onClick={() => setConfirmPasswordView((value) => !value)}
+                  >
+                    {!confirmPasswordView ? eyeOpen : eyeClose}
+                  </div>
                 </div>
                 <div className="flex gap-1 items-center">
                   <input

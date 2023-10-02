@@ -26,7 +26,7 @@ const Navbar = ({ children }) => {
     <div className="drawer flex flex-col max-w-screen">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
-        <div className="flex items-center w-screen justify-between bg-base-100 p-[1rem] ">
+        <div className="flex items-center z-10 lg:fixed lg:top-0 lg:w-screen justify-between bg-base-100 p-[1rem] ">
           <div className="flex flex-row lg:hidden">
             <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
               <svg
@@ -46,7 +46,7 @@ const Navbar = ({ children }) => {
           </div>
 
           <Link to={"/"}>
-            <div className="block w-[95px] mr-4 2xl:ml-4 cursor-pointer">
+            <div className="block w-[150px] mr-4 2xl:ml-4 cursor-pointer">
               <img src="https://marketplacenepal.com/frontend/images/logo.png" />
             </div>
           </Link>
@@ -56,7 +56,7 @@ const Navbar = ({ children }) => {
               theme === "dark" ? "text-white" : "text-primary"
             } lg:ml-[51px]`}
           >
-            <ul className="menu menu-horizontal flex items-center gap-8 lg:ml-0">
+            <ul className="menu menu-horizontal flex items-center gap-5 lg:ml-0">
               <Link to={"/"}>
                 <li className="text-base cursor-pointer">Home</li>
               </Link>
@@ -142,7 +142,9 @@ const Navbar = ({ children }) => {
           </div>
         </div>
       </div>
-      <div className="max-w-screen">{children}</div>
+      <div className="max-w-screen mt-[10px] z-0 lg:pt-[4.5rem]">
+        {children}
+      </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
         <ul
@@ -156,7 +158,7 @@ const Navbar = ({ children }) => {
               <img
                 src={mpn}
                 alt="Market Place Nepal"
-                className="rounded-[100%] w-[10rem] ml-[61px]"
+                className="rounded-[100%] w-[6rem] ml-[6rem]"
               />
             </li>
           </Link>
