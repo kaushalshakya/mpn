@@ -56,7 +56,7 @@ const Navbar = ({ children }) => {
               theme === "dark" ? "text-white" : "text-primary"
             } lg:ml-[51px]`}
           >
-            <ul className="menu menu-horizontal flex items-center gap-5 lg:ml-0">
+            <ul className="menu menu-horizontal flex items-center gap-5">
               <Link to={"/"}>
                 <li className="text-base cursor-pointer">Home</li>
               </Link>
@@ -74,7 +74,7 @@ const Navbar = ({ children }) => {
               </Link>
             </ul>
           </div>
-          <div className="flex-none hidden lg:ml-[2rem] lg:flex">
+          <div className="flex-none hidden lg:flex px-5">
             <Link to={"/register"}>
               <button
                 type="button"

@@ -46,7 +46,7 @@ const Footer = () => {
     <footer
       className={
         !fixedFooter
-          ? "footer max-h-[75px] md:max-h-[100px] p-[1.3rem] items-center flex md:justify-between lg:justify-between justify-center bg-base-100 fixed lg:static bottom-0 text-neutral-content"
+          ? "footer max-h-[75px] md:max-h-[100px] p-[1.3rem] items-center flex md:justify-between lg:justify-between justify-center bg-base-100 static bottom-0 text-neutral-content"
           : "footer max-h-[75px] md:max-h-[100px] p-[1.3rem] items-center flex md:justify-between lg:justify-between justify-center bg-base-100 fixed bottom-0 text-neutral-content"
       }
     >

@@ -208,7 +208,7 @@ const Register = () => {
           className="hidden lg:block xl:block 2xl:block"
         />
         <div className="flex flex-col items-center justify-center">
-          <div className="join flex items-stretch">
+          <div className="join">
             <input
               className="join-item hover:bg-[#BEB4D3] checked:text-white hover:text-white bg-base-100 btn"
               type="radio"

@@ -36,7 +36,7 @@ export default function App() {
   }, [dataTheme]);
   return (
     <>
-      <div className="bg-base-200 min-h-screen max-w-screen">
+      <div className="bg-[#eef3f4] min-h-screen max-w-screen">
         <Router>
           <Routes />
         </Router>
