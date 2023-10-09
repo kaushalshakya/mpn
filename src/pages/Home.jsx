@@ -9,7 +9,7 @@ const Home = () => {
       <HomeAd />
       <div className="px-10">
         <div className="flex flex-col md:flex-row gap-10">
-          <div className="bg-white rounded-lg p-5 gap-5 flex flex-col">
+          <div className="bg-white rounded-lg p-5 gap-5 w-[200rem] flex flex-col">
             <div className="flex justify-between">
               <h1 className="text-xl font-semibold">Create</h1>
               <ArrowDownSFillIcon />
@@ -54,13 +54,33 @@ const Home = () => {
             <div className="flex gap-10 items-center">
               <h1 className="font-bold">Most Searched:</h1>
               <ul className="flex gap-10">
-                <li className="bg-[#d9d9d9] py-2 px-4 rounded-lg">Desktop</li>
-                <li className="bg-[#d9d9d9] py-2 px-4 rounded-lg">Flower</li>
-                <li className="bg-[#d9d9d9] py-2 px-4 rounded-lg">Fish</li>
-                <li className="bg-[#d9d9d9] py-2 px-4 rounded-lg">Win</li>
-                <li className="bg-[#d9d9d9] py-2 px-4 rounded-lg">Cat</li>
-                <li className="bg-[#d9d9d9] py-2 px-4 rounded-lg">Computer</li>
-                <li className="bg-[#d9d9d9] py-2 px-4 rounded-lg">Bike</li>
+                <li className="bg-[#d9d9d9] cursor-pointer py-2 px-4 rounded-lg">
+                  Desktop
+                </li>
+                <li className="bg-[#d9d9d9] cursor-pointer py-2 px-4 rounded-lg">
+                  Flower
+                </li>
+                <li className="bg-[#d9d9d9] cursor-pointer py-2 px-4 rounded-lg">
+                  Fish
+                </li>
+                <li className="bg-[#d9d9d9] cursor-pointer py-2 px-4 rounded-lg">
+                  Win
+                </li>
+                <li className="bg-[#d9d9d9] cursor-pointer py-2 px-4 rounded-lg">
+                  Cat
+                </li>
+                <li className="bg-[#d9d9d9] cursor-pointer py-2 px-4 rounded-lg">
+                  Computer
+                </li>
+                <li className="bg-[#d9d9d9] cursor-pointer py-2 px-4 rounded-lg">
+                  Bike
+                </li>
+                <li className="bg-[#d9d9d9] cursor-pointer py-2 px-4 rounded-lg">
+                  Cat
+                </li>
+                <li className="bg-[#d9d9d9] cursor-pointer py-2 px-4 rounded-lg">
+                  Computer
+                </li>
               </ul>
             </div>
             <div className="border border-black"></div>
@@ -78,6 +98,10 @@ const Home = () => {
               </button>
             </div>
           </div>
+        </div>
+        <div className="flex w-screen gap-10">
+          <div></div>
+          <div></div>
         </div>
       </div>
     </main>
