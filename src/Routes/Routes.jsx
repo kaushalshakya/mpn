@@ -13,6 +13,7 @@ import Navbar from "../components/Navbar";
 
 const Routes = () => {
   const location = useLocation();
+  const isHome = location.pathname === "/";
   return (
     <>
       <Navbar>
@@ -26,7 +27,7 @@ const Routes = () => {
           <Route path="/login" element={<Login />} />
         </Endpoints>
       </Navbar>
-      {location.pathname !== "/" && <Footer />}
+      {!isHome && <Footer />}
     </>
   );
 };
