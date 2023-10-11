@@ -156,8 +156,8 @@ const Home = () => {
               </li>
             </ul>
           </div>
-          <div className="bg-white text-black p-5 gap-5 rounded-md flex flex-col h-[28rem]">
-            <div className="flex items-center justify-between w-full lg:w-[90rem]">
+          <div className="bg-white text-black p-5 gap-5 rounded-md flex  flex-col h-[28rem]">
+            <div className="flex items-center justify-between w-full">
               <h1 className="font-extrabold text-2xl">Marketplace</h1>
               <p className="text-primary cursor-pointer">View All</p>
             </div>

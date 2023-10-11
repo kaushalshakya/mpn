@@ -23,10 +23,10 @@ const MarketplaceSlider = ({ queryKey, endpoint }) => {
   }
 
   return (
-    <div className="carousel carousel-center lg:w-[90rem] rounded-lg space-x-4">
+    <div className="carousel carousel-center lg:w-[86rem] rounded-lg space-x-4">
       {data.map((content) => (
         <div
-          className="carousel-item flex bg-base-200 rounded-md px-4 py-2 flex-col"
+          className="carousel-item flex bg-base-200 rounded-md cursor-pointer px-4 py-2 flex-col"
           key={content.id}
         >
           <h1 className="text-lg font-semibold">{content.name}</h1>
