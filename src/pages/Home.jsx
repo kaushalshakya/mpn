@@ -2,16 +2,17 @@ import React from "react";
 import HomeAd from "../components/Home Components/HomeAd";
 import ArrowDownSFillIcon from "remixicon-react/ArrowDownSFillIcon";
 import SearchLineIcon from "remixicon-react/SearchLineIcon";
-import megaphone from "../../public/megaphone.png";
-import deal from "../../public/deal.png";
-import gift from "../../public/gift.png";
-import event from "../../public/event.png";
-import polling from "../../public/polling.png";
-import post from "../../public/post.png";
-import trophy from "../../public/trophy.png";
-import recommend from "../../public/recommend.png";
-import web from "../../public/web.png";
-import topRated from "../../public/topRated.png";
+import megaphone from "/public/megaphone.png";
+import deal from "/public/deal.png";
+import gift from "/public/gift.png";
+import event from "/public/event.png";
+import polling from "/public/polling.png";
+import post from "/public/post.png";
+import trophy from "/trophy.png";
+import recommend from "/recommend.png";
+import web from "/web.png";
+import topRated from "/topRated.png";
+import MarketplaceSlider from "../components/Home Components/MarketplaceSlider";
 
 const Home = () => {
   return (
@@ -45,9 +46,8 @@ const Home = () => {
                       <option disabled selected>
                         All
                       </option>
-                      <option>Sci-fi</option>
-                      <option>Drama</option>
-                      <option>Action</option>
+                      <option>Business</option>
+                      <option>Posts</option>
                     </select>
                     <input
                       className="input join-item lg:w-[62rem]"
@@ -156,11 +156,15 @@ const Home = () => {
               </li>
             </ul>
           </div>
-          <div className="bg-white text-black p-5 gap-5 rounded-md flex flex-col">
-            Marketplace
+          <div className="bg-white text-black p-5 gap-5 rounded-md flex flex-col h-[28rem]">
+            <div className="flex items-center justify-between w-full lg:w-[90rem]">
+              <h1 className="font-extrabold text-2xl">Marketplace</h1>
+              <p className="text-primary cursor-pointer">View All</p>
+            </div>
+            <MarketplaceSlider queryKey={["marketplace"]} endpoint="products" />
           </div>
         </div>
-        <div>content</div>
+        <div>asdasd</div>
       </div>
     </main>
   );
