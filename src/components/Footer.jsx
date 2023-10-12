@@ -15,7 +15,6 @@ const Footer = () => {
     location.pathname === "/contact";
 
   useEffect(() => {
-    console.log(dataTheme);
     const currentTheme = localStorage.getItem("theme");
     setTheme(currentTheme);
 

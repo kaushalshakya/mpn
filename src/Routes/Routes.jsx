@@ -1,4 +1,4 @@
-import { Route, Routes as Endpoints, useLocation } from "react-router-dom";
+import { Route, Routes as Endpoints } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
@@ -12,8 +12,6 @@ import React from "react";
 import Navbar from "../components/Navbar";
 
 const Routes = () => {
-  const location = useLocation();
-  const isHome = location.pathname === "/";
   return (
     <>
       <Navbar>
@@ -27,7 +25,7 @@ const Routes = () => {
           <Route path="/login" element={<Login />} />
         </Endpoints>
       </Navbar>
-      {!isHome && <Footer />}
+      <Footer />
     </>
   );
 };

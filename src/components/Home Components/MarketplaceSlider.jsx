@@ -10,7 +10,7 @@ const MarketplaceSlider = ({ queryKey, endpoint }) => {
     queryKey: queryKey,
     queryFn: async () => {
       const response = await axios.get(
-        `https://6526314267cfb1e59ce7fae8.mockapi.io/api/v1/${endpoint}`
+        import.meta.env.VITE_mock_api_url + endpoint
       );
       return response.data;
     },
@@ -55,11 +55,7 @@ const MarketplaceSlider = ({ queryKey, endpoint }) => {
           key={content.id}
         >
           <h1 className="text-lg font-semibold">{content.name}</h1>
-          <img
-            src={content.image}
-            className="rounded-md w-[25rem] h-full"
-            alt={content.name}
-          />
+          <img src={content.image} className="rounded-md" alt={content.name} />
           <p className="text-sm">Shop Now</p>
         </div>
       ))}

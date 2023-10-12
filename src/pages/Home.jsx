@@ -13,10 +13,11 @@ import recommend from "/recommend.png";
 import web from "/web.png";
 import topRated from "/topRated.png";
 import MarketplaceSlider from "../components/Home Components/MarketplaceSlider";
+import PostsSlider from "../components/Home Components/PostsSlider";
 
 const Home = () => {
   return (
-    <main className="flex flex-col gap-5">
+    <main className="flex flex-col gap-5 mb-5">
       <HomeAd />
       <div className="px-10 flex flex-col gap-5">
         <div>
@@ -103,8 +104,8 @@ const Home = () => {
           </div>
         </div>
         <div className="flex gap-5 items-center">
-          <div className="bg-white text-black p-5 gap-5 rounded-md flex flex-col lg:w-[25rem]">
-            <ul className="flex flex-col gap-2">
+          <div className="bg-white text-black p-5 gap-5 rounded-md flex flex-col lg:w-full">
+            <ul className="flex flex-col h-full gap-4 justify-between">
               <li className="flex items-center gap-4">
                 <img src={web} alt="" className="w-5 h-5" />
                 <p>Marketplace</p>
@@ -156,15 +157,21 @@ const Home = () => {
               </li>
             </ul>
           </div>
-          <div className="bg-white text-black p-5 gap-5 rounded-md flex  flex-col h-[28rem]">
+          <div className="bg-white text-black p-5 gap-5 rounded-md flex flex-col h-[36.5rem]">
             <div className="flex items-center justify-between w-full">
-              <h1 className="font-extrabold text-2xl">Marketplace</h1>
+              <h1 className="font-extrabold text-xl">Marketplace</h1>
               <p className="text-primary cursor-pointer">View All</p>
             </div>
             <MarketplaceSlider queryKey={["marketplace"]} endpoint="products" />
           </div>
         </div>
-        <div>asdasd</div>
+        <div className="bg-white text-black p-5 gap-5 rounded-md w-full flex flex-col ">
+          <div className="flex items-center w-full justify-between ">
+            <h1 className="font-extrabold text-xl">Posts</h1>
+            <p className="text-primary cursor-pointer">View All</p>
+          </div>
+          <PostsSlider queryKey={["posts"]} endpoint="posts" />
+        </div>
       </div>
     </main>
   );
