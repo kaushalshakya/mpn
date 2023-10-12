@@ -39,6 +39,7 @@ const PostsSlider = ({ queryKey, endpoint }) => {
               <h2 className="card-title">{content.name}</h2>
               <div className="flex items-center gap-2">
                 <div
+                  className="select-none"
                   onClick={() =>
                     setLiked((prevLiked) => ({
                       ...prevLiked,
