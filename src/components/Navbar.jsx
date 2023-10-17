@@ -115,7 +115,7 @@ const Navbar = ({ children }) => {
                       <a className="justify-between">Profile</a>
                     </li>
                     <li>
-                      <a>Logout</a>
+                      <a onClick={() => setLogout(true)}>Logout</a>
                     </li>
                   </ul>
                 </div>

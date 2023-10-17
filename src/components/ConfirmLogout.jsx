@@ -29,7 +29,7 @@ const ConfirmLogout = ({ setLogout }) => {
   };
   return (
     <>
-      <div className="fixed inset-0 flex items-center justify-center z-50">
+      <div className="fixed inset-0 flex items-center justify-center z-[1000]">
         <div className="modal modal-open">
           <div className="modal-box">
             <h2 className="text-xl mb-1 font-bold">Confirm Logout</h2>
