@@ -24,7 +24,6 @@ const Navbar = ({ children }) => {
 
   useEffect(() => {
     if (!authenticated) {
-      console.log("here", authenticated);
       toast.success("Logged out successfully", toastTheme);
       setAuthenticated(true);
     }

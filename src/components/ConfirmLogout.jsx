@@ -4,11 +4,9 @@ import "react-toastify/dist/ReactToastify.css";
 import useAuthStore from "../store/authStore";
 import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
-import { useNavigate } from "react-router-dom";
 import { toastTheme } from "./toastTheme";
 
 const ConfirmLogout = ({ setLogout, setAuthenticated }) => {
-  const navigate = useNavigate();
   const auth = useAuthStore();
 
   const logoutConfirm = async () => {
@@ -34,7 +32,7 @@ const ConfirmLogout = ({ setLogout, setAuthenticated }) => {
       setAuthenticated(false);
     },
     onError: (error) => {
-      console.log(error);
+      toast.error(error.response.data.message, toastTheme);
     },
   });
 

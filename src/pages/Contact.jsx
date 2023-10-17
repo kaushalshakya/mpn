@@ -7,7 +7,6 @@ const Contact = () => {
   );
 
   useEffect(() => {
-    console.log(dataTheme);
     const currentTheme = localStorage.getItem("theme");
     setTheme(currentTheme);
 
