@@ -30,9 +30,12 @@ const PostsSlider = ({ queryKey, endpoint }) => {
   return (
     <div className="carousel carousel-center w-full p-4 space-x-4 bg-base-100 rounded-box">
       {data.map((content) => (
-        <div className="carousel-item flex flex-col gap-5 w-96">
+        <div
+          key={content.id}
+          className="carousel-item flex flex-col gap-5 w-96"
+        >
           <figure>
-            <img src={content.image} alt="Shoes" />
+            <img src={content.image} className="rounded-md" alt="Shoes" />
           </figure>
           <div className="flex flex-col gap-5">
             <div className="flex items-center justify-between">

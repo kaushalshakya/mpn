@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+import { useMutation } from "@tanstack/react-query";
+import useAuthStore from "../store/authStore";
 
 const eyeOpen = (
   <svg
@@ -114,12 +117,14 @@ const Login = () => {
 
   const currentTheme = localStorage.getItem("theme");
 
+  const navigate = useNavigate();
+
   const toastTheme = {
-    position: "top-right",
+    position: "bottom-center",
     autoClose: 2000,
     hideProgressBar: false,
     closeOnClick: true,
-    pauseOnHover: true,
+    pauseOnHover: false,
     draggable: true,
     progress: undefined,
     theme: theme === "fantasy" ? "light" : "dark",
@@ -129,8 +134,34 @@ const Login = () => {
     setTheme(currentTheme);
   });
 
+  const authenitcateMutation = async (payload) => {
+    const response = await axios.post(
+      import.meta.env.VITE_staging_URL + "user/login",
+      payload
+    );
+    return response.data;
+  };
+
+  const { setUser, setIsAuthenticated, setToken } = useAuthStore();
+
+  const mutation = useMutation(authenitcateMutation, {
+    onSuccess: (data) => {
+      toast.success(data.message, toastTheme);
+      setUser(data.data.user);
+      setIsAuthenticated(true);
+      setToken(data.data.access_token);
+      setTimeout(() => {
+        navigate("/");
+      }, toastTheme.autoClose);
+    },
+    onError: (error) => {
+      toast.error(error.response.data.message, toastTheme);
+    },
+  });
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!email || !password) {
       return toast.error("Please enter all the necessary fields", toastTheme);
     }
@@ -139,6 +170,13 @@ const Login = () => {
     if (!regex.test(email)) {
       return toast.error("Email is invalid", toastTheme);
     }
+
+    const payload = {
+      user_email: email,
+      user_password: password,
+    };
+
+    mutation.mutate(payload);
   };
 
   return (

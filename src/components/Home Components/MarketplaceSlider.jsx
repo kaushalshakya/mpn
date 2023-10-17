@@ -20,8 +20,7 @@ const MarketplaceSlider = ({ queryKey, endpoint }) => {
     const interval = setInterval(() => {
       if (carouselRef.current) {
         const { scrollWidth, scrollLeft } = carouselRef.current;
-        const singleCardWidth =
-          carouselRef.current.children[0].offsetWidth + 32;
+        const singleCardWidth = carouselRef.current.children[0].offsetWidth;
 
         // If we're close to the end, reset scroll to start.
         if (scrollLeft + singleCardWidth >= scrollWidth) {
@@ -51,11 +50,15 @@ const MarketplaceSlider = ({ queryKey, endpoint }) => {
     >
       {data.map((content) => (
         <div
-          className="carousel-item flex bg-base-200 rounded-md cursor-pointer px-4 py-2 flex-col"
+          className="carousel-item flex rounded-md cursor-pointer px-4 py-2 flex-col gap-2"
           key={content.id}
         >
           <h1 className="text-lg font-semibold">{content.name}</h1>
-          <img src={content.image} className="rounded-md" alt={content.name} />
+          <img
+            src={content.image}
+            className="rounded-md w-[20rem] h-[26rem]"
+            alt={content.name}
+          />
           <p className="text-sm">Shop Now</p>
         </div>
       ))}

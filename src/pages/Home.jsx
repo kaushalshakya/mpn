@@ -2,18 +2,21 @@ import React from "react";
 import HomeAd from "../components/Home Components/HomeAd";
 import ArrowDownSFillIcon from "remixicon-react/ArrowDownSFillIcon";
 import SearchLineIcon from "remixicon-react/SearchLineIcon";
-import megaphone from "/public/megaphone.png";
-import deal from "/public/deal.png";
-import gift from "/public/gift.png";
-import event from "/public/event.png";
-import polling from "/public/polling.png";
-import post from "/public/post.png";
+import megaphone from "/megaphone.png";
+import deal from "/deal.png";
+import gift from "/gift.png";
+import event from "/event.png";
+import polling from "/polling.png";
+import post from "/post.png";
 import trophy from "/trophy.png";
 import recommend from "/recommend.png";
 import web from "/web.png";
 import topRated from "/topRated.png";
 import MarketplaceSlider from "../components/Home Components/MarketplaceSlider";
 import PostsSlider from "../components/Home Components/PostsSlider";
+import Carousel from "../components/Home Components/Carousel";
+import FeaturedPosts from "../components/Home Components/FeaturedPosts";
+import Businesses from "../components/Home Components/Businesses";
 
 const Home = () => {
   return (
@@ -165,13 +168,24 @@ const Home = () => {
             <MarketplaceSlider queryKey={["marketplace"]} endpoint="products" />
           </div>
         </div>
-        <div className="bg-white text-black p-5 gap-5 rounded-md w-full flex flex-col ">
-          <div className="flex items-center w-full justify-between ">
-            <h1 className="font-extrabold text-xl">Posts</h1>
-            <p className="text-primary cursor-pointer">View All</p>
-          </div>
-          <PostsSlider queryKey={["posts"]} endpoint="posts" />
-        </div>
+        <Carousel
+          Component={PostsSlider}
+          queryKey={["posts"]}
+          endpoint="posts"
+          title="Posts"
+        />
+        <Carousel
+          Component={FeaturedPosts}
+          queryKey={["featuredPosts"]}
+          endpoint="products"
+          title="Featured Posts"
+        />
+        <Carousel
+          Component={Businesses}
+          queryKey={["business"]}
+          endpoint="posts"
+          title="Companies you may want to visit"
+        />
       </div>
     </main>
   );
