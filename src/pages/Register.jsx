@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { toastTheme } from "../components/toastTheme";
 
 const eyeOpen = (
   <svg
@@ -117,17 +118,6 @@ const Register = () => {
   const [confirmPasswordView, setConfirmPasswordView] = useState(false);
 
   const currentTheme = localStorage.getItem("theme");
-
-  const toastTheme = {
-    position: "top-right",
-    autoClose: 2000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: theme === "fantasy" ? "light" : "dark",
-  };
 
   useEffect(() => {
     setTheme(currentTheme);

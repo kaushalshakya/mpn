@@ -3,6 +3,8 @@ import mpn from "../assets/mpn.jpg";
 import { Link } from "react-router-dom";
 import useAuthStore from "../store/authStore";
 import ConfirmLogout from "./ConfirmLogout";
+import { toastTheme } from "./toastTheme";
+import { ToastContainer, toast } from "react-toastify";
 
 const Navbar = ({ children }) => {
   const [theme, setTheme] = useState(
@@ -12,13 +14,21 @@ const Navbar = ({ children }) => {
   const user = useAuthStore((state) => state.user);
 
   const [logout, setLogout] = useState(false);
-  console.log("Logout state:", logout);
+  const [authenticated, setAuthenticated] = useState(true);
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
     const localTheme = localStorage.getItem("theme");
     document.querySelector("html").setAttribute("data-theme", localTheme);
   }, [theme]);
+
+  useEffect(() => {
+    if (!authenticated) {
+      console.log("here", authenticated);
+      toast.success("Logged out successfully", toastTheme);
+      setAuthenticated(true);
+    }
+  }, [authenticated]);
 
   const handleToggle = (e) => {
     if (e.target.checked) {
@@ -29,8 +39,8 @@ const Navbar = ({ children }) => {
   };
   return (
     <>
-      {" "}
       <div className="drawer flex flex-col max-w-screen">
+        <ToastContainer />
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
           <div className="flex items-center lg:border lg:border-base-300 z-20 lg:fixed lg:top-0 lg:w-screen justify-between bg-base-100 p-[1rem] ">
@@ -213,7 +223,12 @@ const Navbar = ({ children }) => {
           </ul>
         </div>
       </div>
-      {logout && <ConfirmLogout setLogout={setLogout} />}
+      {logout && (
+        <ConfirmLogout
+          setLogout={setLogout}
+          setAuthenticated={setAuthenticated}
+        />
+      )}
     </>
   );
 };

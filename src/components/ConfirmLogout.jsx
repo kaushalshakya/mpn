@@ -1,27 +1,45 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useAuthStore from "../store/authStore";
+import axios from "axios";
+import { useMutation } from "@tanstack/react-query";
+import { useNavigate } from "react-router-dom";
+import { toastTheme } from "./toastTheme";
 
-const ConfirmLogout = ({ setLogout }) => {
-  const toastTheme = {
-    position: "top-right",
-    autoClose: 3000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "dark",
+const ConfirmLogout = ({ setLogout, setAuthenticated }) => {
+  const navigate = useNavigate();
+  const auth = useAuthStore();
+
+  const logoutConfirm = async () => {
+    const response = await axios.post(
+      import.meta.env.VITE_staging_URL + "user/logout",
+      {},
+      {
+        headers: {
+          Authorization: `Bearer ${auth.token}`,
+        },
+      }
+    );
+    return response.data;
   };
 
   const { setUser, setIsAuthenticated, setToken } = useAuthStore();
 
+  const mutation = useMutation(logoutConfirm, {
+    onSuccess: (data) => {
+      setUser(null);
+      setIsAuthenticated(false);
+      setToken(null);
+      setAuthenticated(false);
+    },
+    onError: (error) => {
+      console.log(error);
+    },
+  });
+
   const handleLogout = () => {
-    setUser(null);
-    setIsAuthenticated(false);
-    setToken(null);
-    toast.success("Logged out successfully", toastTheme);
+    mutation.mutate();
     setLogout(false);
   };
   const cancelLogout = () => {

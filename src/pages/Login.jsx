@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
 import useAuthStore from "../store/authStore";
+import { toastTheme } from "../components/toastTheme";
 
 const eyeOpen = (
   <svg
@@ -118,17 +119,6 @@ const Login = () => {
   const currentTheme = localStorage.getItem("theme");
 
   const navigate = useNavigate();
-
-  const toastTheme = {
-    position: "bottom-center",
-    autoClose: 2000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: false,
-    draggable: true,
-    progress: undefined,
-    theme: theme === "fantasy" ? "light" : "dark",
-  };
 
   useEffect(() => {
     setTheme(currentTheme);
