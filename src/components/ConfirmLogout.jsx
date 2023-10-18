@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useAuthStore from "../store/authStore";
 import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
 import { toastTheme } from "./toastTheme";
+import { useNavigate } from "react-router-dom";
 
 const ConfirmLogout = ({ setLogout, setAuthenticated }) => {
   const auth = useAuthStore();
+  const navigate = useNavigate();
 
   const logoutConfirm = async () => {
     const response = await axios.post(
@@ -39,6 +41,9 @@ const ConfirmLogout = ({ setLogout, setAuthenticated }) => {
   const handleLogout = () => {
     mutation.mutate();
     setLogout(false);
+    setTimeout(() => {
+      navigate("/");
+    }, 500);
   };
   const cancelLogout = () => {
     setLogout(false);

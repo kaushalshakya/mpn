@@ -10,6 +10,7 @@ import Login from "../pages/Login";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Profile from "../pages/Profile";
+import Unauthenticated from "../pages/Unauthenticated";
 
 const Routes = () => {
   return (
@@ -24,6 +25,7 @@ const Routes = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/unauthenticated" element={<Unauthenticated />} />
         </Endpoints>
       </Navbar>
       <Footer />

@@ -1,9 +1,14 @@
 import React from "react";
 import useAuthStore from "../store/authStore";
 import vite from "/vite.svg";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const user = useAuthStore((state) => state.user);
+  const navigate = useNavigate();
+  if (!user) {
+    return navigate("/unauthenticated");
+  }
   return (
     <div className="p-10 flex gap-10 items-start cursor-default">
       <div className="bg-white lg:w-1/5 flex flex-col gap-5 p-5 rounded-md">
@@ -51,7 +56,7 @@ const Profile = () => {
           <div className="flex items-center gap-10">
             <div className="rounded-full shadow-2xl">
               <img
-                src={user ? (user.user_image ? user.user_image : vite) : vite}
+                src={user.user_image ? user.user_image : vite}
                 alt=""
                 className="w-28 h-28"
               />

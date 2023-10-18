@@ -12,7 +12,8 @@ const Footer = () => {
   const fixedFooter =
     location.pathname === "/login" ||
     location.pathname === "/advertise" ||
-    location.pathname === "/contact";
+    location.pathname === "/contact" ||
+    location.pathname === "/unauthenticated";
   useEffect(() => {
     const currentTheme = localStorage.getItem("theme");
     setTheme(currentTheme);
