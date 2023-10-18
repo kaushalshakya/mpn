@@ -356,7 +356,6 @@ const Register = () => {
                   />
                   <div
                     className="absolute top-[53px] cursor-pointer right-[10px]"
-                    onBlur={"hidden"}
                     onClick={() => setPasswordView((value) => !value)}
                   >
                     {!passwordView ? eyeOpen : eyeClose}

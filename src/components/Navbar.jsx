@@ -92,17 +92,23 @@ const Navbar = ({ children }) => {
                 </Link>
               </ul>
             </div>
-            <div className="flex-none hidden lg:flex px-5">
-              <Link to={"/register"}>
-                <button
-                  type="button"
-                  className={`btn btn-ghost text-base ${
-                    theme === "dark" ? "text-white" : "text-primary"
-                  } font-normal normal-case`}
-                >
-                  Be a Contributor
-                </button>
-              </Link>
+            <div className="flex-none hidden items-center lg:flex gap-5 px-5">
+              {user ? (
+                <Link to={"/profile"}>
+                  <p className="text-primary">{user.user_fullname}</p>
+                </Link>
+              ) : (
+                <Link to={"/register"}>
+                  <button
+                    type="button"
+                    className={`btn btn-ghost text-base ${
+                      theme === "dark" ? "text-white" : "text-primary"
+                    } font-normal normal-case`}
+                  >
+                    Be a Contributor
+                  </button>
+                </Link>
+              )}
 
               {user ? (
                 <div className="dropdown dropdown-end">
@@ -121,10 +127,12 @@ const Navbar = ({ children }) => {
                     }  rounded-box w-52`}
                   >
                     <li>
-                      <a className="justify-between">Profile</a>
+                      <Link to={"/profile"}>
+                        <p className="justify-between">Profile</p>
+                      </Link>
                     </li>
                     <li>
-                      <a onClick={() => setLogout(true)}>Logout</a>
+                      <p onClick={() => setLogout(true)}>Logout</p>
                     </li>
                   </ul>
                 </div>
@@ -190,7 +198,9 @@ const Navbar = ({ children }) => {
             <p className="divider"></p>
             {user ? (
               <>
-                <li className="text-base cursor-pointer">View Profile</li>
+                <Link to={"/profile"}>
+                  <li className="text-base cursor-pointer">View Profile</li>
+                </Link>
                 <p className="divider"></p>
               </>
             ) : (
