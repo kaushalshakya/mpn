@@ -1,10 +1,10 @@
 import React from "react";
 import useAuthStore from "../../store/authStore";
-import vite from "/vite.svg";
 import pencil from "/pencil.png";
 import contactNum from "/telephone.png";
 import mail from "/envelope.png";
 import home from "/hut.png";
+import defaultProfile from "/default_profile.jpg";
 
 const UserProfile = () => {
   const user = useAuthStore((state) => state.user);
@@ -21,9 +21,9 @@ const UserProfile = () => {
         <div className="flex items-center gap-10">
           <div className="rounded-full shadow-2xl">
             <img
-              src={user.user_image ? user.user_image : vite}
+              src={user.user_image ? user.user_image : defaultProfile}
               alt=""
-              className="w-28 h-28"
+              className="w-28 h-28 rounded-full"
             />
           </div>
           <div className="flex flex-col gap-5">

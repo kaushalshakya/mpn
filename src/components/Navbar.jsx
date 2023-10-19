@@ -5,6 +5,7 @@ import useAuthStore from "../store/authStore";
 import ConfirmLogout from "./ConfirmLogout";
 import { toastTheme } from "./toastTheme";
 import { ToastContainer, toast } from "react-toastify";
+import defaultProfile from "/default_profile.jpg";
 
 const Navbar = ({ children }) => {
   const [theme, setTheme] = useState(
@@ -117,7 +118,7 @@ const Navbar = ({ children }) => {
                     className="btn btn-ghost btn-circle avatar"
                   >
                     <div className="w-10 rounded-full">
-                      <img src="/vite.svg" />
+                      <img src={defaultProfile} />
                     </div>
                   </label>
                   <ul
