@@ -2,9 +2,18 @@ import React from "react";
 import useAuthStore from "../../store/authStore";
 import vite from "/vite.svg";
 import pencil from "/pencil.png";
+import contactNum from "/telephone.png";
+import mail from "/envelope.png";
+import home from "/hut.png";
 
 const UserProfile = () => {
   const user = useAuthStore((state) => state.user);
+  let contact;
+  if (user.user_mobile) {
+    if (user.user_mobile.includes("+977")) {
+      contact = user.user_mobile.replace("+977", "+977-");
+    }
+  }
   return (
     <>
       <h1 className="text-2xl font-bold text-pink-500">My Profile</h1>
@@ -19,7 +28,7 @@ const UserProfile = () => {
           </div>
           <div className="flex flex-col gap-5">
             <p className="text-xl">{user.user_fullname}</p>
-            <p className="text-">{user.user_email}</p>
+            <p className="text-lg">{user.user_email}</p>
           </div>
         </div>
         <button
@@ -35,9 +44,18 @@ const UserProfile = () => {
         <h1 className="font-bold text-xl">{user.user_fullname}</h1>
         <div className="flex items-center justify-between">
           <div className="flex flex-col w-2/5 gap-5">
-            <p>{user.user_address ? user.user_address : "Not Set"}</p>
-            <p>{user.user_mobile ? user.user_mobile : "Not Set"}</p>
-            <p>{user.user_email}</p>
+            <p className="flex items-center gap-2">
+              <img src={home} alt="" className="w-5 h-5" />
+              {user.user_address ? user.user_address : "Not Set"}
+            </p>
+            <p className="flex items-center gap-2">
+              <img src={contactNum} alt="" className="w-5 h-5" />
+              {user.user_mobile ? contact : "Not Set"}
+            </p>
+            <p className="flex items-center gap-2">
+              <img src={mail} alt="" className="w-5 h-5" />
+              {user.user_email}
+            </p>
           </div>
           <div className="flex w-3/5 flex-col gap-5">
             <p>Reward Collection Method: Not Set</p>

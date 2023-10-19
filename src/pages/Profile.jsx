@@ -90,7 +90,7 @@ const Profile = () => {
         <h1 className="font-bold">My Contribution List</h1>
         <h1 className="font-bold">Contribute New Business</h1>
       </div>
-      <div className="bg-white lg:w-4/5 p-16 flex flex-col gap-10 rounded-md">
+      <div className="bg-white lg:w-4/5 p-16 flex flex-col gap-10 h-full rounded-md">
         <Outlet />
       </div>
     </div>
