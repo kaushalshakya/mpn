@@ -142,7 +142,7 @@ const Login = () => {
       setToken(data.data.access_token);
       setTimeout(() => {
         navigate("/");
-      }, toastTheme.autoClose);
+      }, 300);
     },
     onError: (error) => {
       toast.error(error.response.data.message, toastTheme);

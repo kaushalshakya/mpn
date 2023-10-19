@@ -11,6 +11,8 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Profile from "../pages/Profile";
 import Unauthenticated from "../pages/Unauthenticated";
+import UserProfile from "../components/ProfileComponents/UserProfile";
+import UserOrders from "../components/ProfileComponents/UserOrders";
 
 const Routes = () => {
   return (
@@ -24,7 +26,10 @@ const Routes = () => {
           <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile />}>
+            <Route index element={<UserProfile />} />
+            <Route path="orders" element={<UserOrders />} />
+          </Route>
           <Route path="/unauthenticated" element={<Unauthenticated />} />
         </Endpoints>
       </Navbar>

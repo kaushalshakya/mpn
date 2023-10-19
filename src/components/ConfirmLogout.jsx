@@ -43,7 +43,7 @@ const ConfirmLogout = ({ setLogout, setAuthenticated }) => {
     setLogout(false);
     setTimeout(() => {
       navigate("/");
-    }, 500);
+    }, 300);
   };
   const cancelLogout = () => {
     setLogout(false);

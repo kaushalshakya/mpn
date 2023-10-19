@@ -1,5 +1,5 @@
 import React from "react";
-import HomeAd from "../components/Home Components/HomeAd";
+import HomeAd from "../components/HomeComponents/HomeAd";
 import ArrowDownSFillIcon from "remixicon-react/ArrowDownSFillIcon";
 import SearchLineIcon from "remixicon-react/SearchLineIcon";
 import megaphone from "/megaphone.png";
@@ -12,11 +12,11 @@ import trophy from "/trophy.png";
 import recommend from "/recommend.png";
 import web from "/web.png";
 import topRated from "/topRated.png";
-import MarketplaceSlider from "../components/Home Components/MarketplaceSlider";
-import PostsSlider from "../components/Home Components/PostsSlider";
-import Carousel from "../components/Home Components/Carousel";
-import FeaturedPosts from "../components/Home Components/FeaturedPosts";
-import Businesses from "../components/Home Components/Businesses";
+import MarketplaceSlider from "../components/HomeComponents/MarketplaceSlider";
+import PostsSlider from "../components/HomeComponents/PostsSlider";
+import Carousel from "../components/HomeComponents/Carousel";
+import FeaturedPosts from "../components/HomeComponents/FeaturedPosts";
+import Businesses from "../components/HomeComponents/Businesses";
 
 const Home = () => {
   return (
