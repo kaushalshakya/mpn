@@ -35,7 +35,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="hero h-[36rem] max-h-screen lg:min-h-[760px] max-w-screen bg-base-200">
+      <div className="hero h-[36rem] flex items-center justify-center lg:mt-28 max-w-screen">
         <div className="hero-content items-center justify-center md:flex-row md:justify-between lg:justify-between lg:flex-row xl:flex xl:justify-between 2xl:flex 2xl:justify-between 2xl:gap-96">
           <img
             src="https://marketplacenepal.com/frontend/images/contact.png"
