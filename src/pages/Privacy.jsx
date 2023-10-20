@@ -522,6 +522,25 @@ const Privacy = () => {
                 personal information.
               </p>
             </div>
+            <div ref={disclosureRef} className="flex flex-col gap-4">
+              <h1 className="font-bold text-xl">
+                Disclosure of Your Personal Data
+              </h1>
+              <p>Business Transactions</p>
+              <p>
+                If the Company is involved in a merger, acquisition or asset
+                sale, Your Personal Data may be transferred. We will provide
+                notice before Your Personal Data is transferred and becomes
+                subject to a different Privacy Policy.
+              </p>
+              <p>Law Enforcement</p>
+              <p>
+                Under certain circumstances, the Company may be required to
+                disclose Your Personal Data if required to do so by law or in
+                response to valid requests by public authorities (e.g. a court
+                or a government agency).
+              </p>
+            </div>
             <div ref={legalRef} className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">Other legal requirements</h1>
               <p>
