@@ -145,7 +145,7 @@ const Login = () => {
       }, 300);
     },
     onError: (error) => {
-      toast.error(error.response.data.message, toastTheme);
+      toast.error(error.message, toastTheme);
     },
   });
 

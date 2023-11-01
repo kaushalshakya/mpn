@@ -99,7 +99,10 @@ const Home = () => {
                 />
               </div>
               <div>
-                <button type="button" className="btn bg-[#9983ca] text-white">
+                <button
+                  type="button"
+                  className="btn bg-[#9983ca] hover:bg-primary text-white"
+                >
                   Login
                 </button>
               </div>
@@ -107,7 +110,7 @@ const Home = () => {
           </div>
         </div>
         <div className="flex gap-5 items-center">
-          <div className="bg-white text-black p-5 gap-5 rounded-md flex flex-col lg:w-full">
+          <div className="bg-white text-black p-5 gap-5 rounded-md flex flex-col lg:w-[21.5%]">
             <ul className="flex flex-col h-full gap-4 justify-between">
               <li className="flex items-center gap-4">
                 <img src={web} alt="" className="w-5 h-5" />

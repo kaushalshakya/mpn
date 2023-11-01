@@ -420,8 +420,11 @@ const Register = () => {
                     </span>
                   </label>
                 </div>
-                <div className="form-control mt-2">
-                  <button className="btn btn-primary" onClick={handleSubmit}>
+                <div className="form-control my-2">
+                  <button
+                    className="btn btn-primary text-white"
+                    onClick={handleSubmit}
+                  >
                     Sign Up
                   </button>
                 </div>

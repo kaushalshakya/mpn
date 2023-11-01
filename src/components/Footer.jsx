@@ -11,7 +11,6 @@ const Footer = () => {
   const location = useLocation();
   const fixedFooter =
     location.pathname === "/login" ||
-    location.pathname === "/advertise" ||
     location.pathname === "/contact" ||
     location.pathname === "/unauthenticated";
   useEffect(() => {
