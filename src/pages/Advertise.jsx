@@ -31,7 +31,7 @@ const Advertise = () => {
               title="Top Ad Banner"
               width="1113"
               height="239"
-              description="this ad appears on the top section of the page as shown in the image above."
+              description="This ad appears on the top section of the page as shown in the image above."
             />
             <Banner
               title="Main Ad Banner"
@@ -43,13 +43,13 @@ const Advertise = () => {
               title="Search Page Ad Banner"
               width="1113"
               height="239"
-              description="this ad appears on the search page as shown in the image above."
+              description="This ad appears on the search page as shown in the image above."
             />
             <Banner
               title="End Ad Banner"
               width="1113"
               height="239"
-              description="this ad appears on the search page as shown in the image above."
+              description="This ad appears on the search page as shown in the image above."
             />
           </div>
           <Banner
