@@ -8,5 +8,7 @@ api.interceptors.response.use(
   (response) => {
     return response;
   },
-  async (error) => {}
+  async (error) => {
+    console.log(error);
+  }
 );

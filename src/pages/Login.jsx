@@ -6,6 +6,7 @@ import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
 import useAuthStore from "../store/authStore";
 import { toastTheme } from "../components/toastTheme";
+import Cookies from "js-cookie";
 
 const eyeOpen = (
   <svg
@@ -132,7 +133,8 @@ const Login = () => {
     return response.data;
   };
 
-  const { setUser, setIsAuthenticated, setToken } = useAuthStore();
+  const { setUser, setIsAuthenticated, setToken, setRefreshToken } =
+    useAuthStore();
 
   const mutation = useMutation(authenitcateMutation, {
     onSuccess: (data) => {
@@ -140,6 +142,8 @@ const Login = () => {
       setUser(data.data.user);
       setIsAuthenticated(true);
       setToken(data.data.access_token);
+      Cookies.set("refreshToken", data.data.refresh_token);
+      setRefreshToken(data.data.refresh_token);
       setTimeout(() => {
         navigate("/");
       }, 300);

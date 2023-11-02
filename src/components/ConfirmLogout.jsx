@@ -6,6 +6,7 @@ import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
 import { toastTheme } from "./toastTheme";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const ConfirmLogout = ({ setLogout, setAuthenticated }) => {
   const auth = useAuthStore();
@@ -32,6 +33,7 @@ const ConfirmLogout = ({ setLogout, setAuthenticated }) => {
       setIsAuthenticated(false);
       setToken(null);
       setAuthenticated(false);
+      Cookies.remove("refreshToken");
     },
     onError: (error) => {
       toast.error(error.response.data.message, toastTheme);

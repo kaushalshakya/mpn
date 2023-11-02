@@ -20,7 +20,6 @@ const Advertise = () => {
         </div>
         <div className="flex gap-5 items-start justify-between">
           <Banner
-            w="300"
             title="Left Side Ad Banner"
             width="255"
             height="361"
@@ -53,7 +52,6 @@ const Advertise = () => {
             />
           </div>
           <Banner
-            w="300"
             title="Right Side Ad Banner"
             width="255"
             height="361"
