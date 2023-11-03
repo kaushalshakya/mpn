@@ -133,8 +133,7 @@ const Login = () => {
     return response.data;
   };
 
-  const { setUser, setIsAuthenticated, setToken, setRefreshToken } =
-    useAuthStore();
+  const { setUser, setIsAuthenticated, setToken } = useAuthStore();
 
   const mutation = useMutation(authenitcateMutation, {
     onSuccess: (data) => {
@@ -143,7 +142,6 @@ const Login = () => {
       setIsAuthenticated(true);
       setToken(data.data.access_token);
       Cookies.set("refreshToken", data.data.refresh_token);
-      setRefreshToken(data.data.refresh_token);
       setTimeout(() => {
         navigate("/");
       }, 300);

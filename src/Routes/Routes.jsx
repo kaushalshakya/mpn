@@ -32,7 +32,7 @@ const Routes = () => {
             <Route path="orders" element={<UserOrders />} />
           </Route>
           <Route path="/unauthenticated" element={<Unauthenticated />} />
-          <Route component={NotFound}></Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Endpoints>
       </Navbar>
       <Footer />

@@ -15,10 +15,12 @@ import profile from "/user.png";
 
 const Profile = () => {
   const user = useAuthStore((state) => state.user);
+
   const navigate = useNavigate();
   if (!user) {
     return navigate("/unauthenticated");
   }
+
   return (
     <div className="p-10 flex gap-10 items-start cursor-default">
       <div className="bg-white lg:w-1/5 flex flex-col gap-5 p-5 rounded-md">

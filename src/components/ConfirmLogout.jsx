@@ -2,18 +2,18 @@ import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useAuthStore from "../store/authStore";
-import axios from "axios";
 import { useMutation } from "@tanstack/react-query";
 import { toastTheme } from "./toastTheme";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import api from "../axios/axiosInterceptor";
 
 const ConfirmLogout = ({ setLogout, setAuthenticated }) => {
   const auth = useAuthStore();
   const navigate = useNavigate();
 
   const logoutConfirm = async () => {
-    const response = await axios.post(
+    const response = await api.post(
       import.meta.env.VITE_staging_URL + "user/logout",
       {},
       {
