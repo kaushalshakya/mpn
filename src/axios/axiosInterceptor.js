@@ -15,16 +15,18 @@ api.interceptors.response.use(
     if (error.response.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
       const refreshToken = Cookies.get("refreshToken");
+      console.log(refreshToken);
       try {
-        const { data } = await axios.post(
+        const { data } = await axios.get(
           import.meta.env.VITE_staging_URL + "user/refresh-token",
           {},
           {
             headers: {
-              Authorization: refreshToken,
+              Authorization: `Bearer ${refreshToken}`,
             },
           }
         );
+        console.log(data);
         const { setToken } = useAuthStore();
         api.defaults.headers.common[
           "Authorization"
