@@ -14,6 +14,7 @@ import Unauthenticated from "../pages/Unauthenticated";
 import UserProfile from "../components/ProfileComponents/UserProfile";
 import UserOrders from "../components/ProfileComponents/UserOrders";
 import NotFound from "../pages/NotFound";
+import BrandDetails from "../pages/BrandDetails";
 
 const Routes = () => {
   return (
@@ -32,6 +33,7 @@ const Routes = () => {
             <Route path="orders" element={<UserOrders />} />
           </Route>
           <Route path="/unauthenticated" element={<Unauthenticated />} />
+          <Route path="/brand" element={<BrandDetails />} />
           <Route path="*" element={<NotFound />}></Route>
         </Endpoints>
       </Navbar>
