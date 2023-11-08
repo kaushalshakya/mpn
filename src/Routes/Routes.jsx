@@ -15,6 +15,7 @@ import UserProfile from "../components/ProfileComponents/UserProfile";
 import UserOrders from "../components/ProfileComponents/UserOrders";
 import NotFound from "../pages/NotFound";
 import BrandDetails from "../pages/BrandDetails";
+import ProductDetails from "../pages/ProductDetails";
 
 const Routes = () => {
   return (
@@ -32,6 +33,7 @@ const Routes = () => {
             <Route index element={<UserProfile />} />
             <Route path="orders" element={<UserOrders />} />
           </Route>
+          <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/unauthenticated" element={<Unauthenticated />} />
           <Route path="/brand" element={<BrandDetails />} />
           <Route path="*" element={<NotFound />}></Route>

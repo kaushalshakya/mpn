@@ -12,6 +12,7 @@ const Footer = () => {
   const fixedFooter =
     location.pathname === "/login" ||
     location.pathname === "/contact" ||
+    location.pathname === "/brand" ||
     location.pathname === "/unauthenticated";
   useEffect(() => {
     const currentTheme = localStorage.getItem("theme");
@@ -70,7 +71,7 @@ const Footer = () => {
           theme == "dark" ? "text-white" : "text-primary"
         }`}
       >
-        <div>
+        <div className="flex flex-col items-center">
           <header className="footer-title">Social</header>
 
           <div className="flex items-center gap-4">
